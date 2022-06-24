@@ -1,0 +1,14 @@
+.exemp {
+    background-color: black;
+}
+
+.cont {
+    border: 1px solid black;
+    height: 300px;
+}
+
+.wrapper {
+    border: 10px solid red;
+    max-width: 1940px;
+    margin: 0 auto;
+}
