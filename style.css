@@ -1,14 +1,56 @@
-.exemp {
-    background-color: black;
-}
 
-.cont {
-    border: 1px solid black;
-    height: 300px;
-}
 
-.wrapper {
-    border: 10px solid red;
+.wrapper  {
+    border: 3px solid red;
     max-width: 1940px;
     margin: 0 auto;
+    background-color: aqua;
 }
+
+.wrapper:hover .circle  {
+    animation-play-state: paused;
+}
+
+.circle {
+    border-radius: 50%;
+    background-color: red;
+    border: 1px solid black;
+    height: 100px;
+    width: 100px;
+    position: relative;
+    left: 0;
+
+    animation-name:white_circle ;
+    animation-duration: 2s;
+    animation-timing-function:linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-play-state: running;
+    animation-delay: 20ms;
+    animation-fill-mode:backwards;
+    animation: white_circle 2s linear 10 alternate running 20ms forwards, red_circle 1s linear 3 alternate running 20ms backwards;
+}
+
+@keyframes white_circle {
+   0% {
+    left: 0;
+   }
+   50% {
+    border-radius: 0;
+   }
+   100% {
+    left: 500px;
+   }
+}
+
+@keyframes red_circle {
+    0% {
+     left: 0;
+    }
+    50% {
+     border-radius: 20px;
+    }
+    100% {
+     left: 1000px;
+    }
+ }
